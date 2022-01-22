@@ -22,10 +22,10 @@ export class CreateProductDto {
   readonly price: number;
 
   @IsString()
+  @IsUrl()
   @IsNotEmpty()
   readonly image: string;
 
-  @IsUrl()
   @IsNotEmpty()
   readonly currency: string;
 }

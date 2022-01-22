@@ -104,6 +104,19 @@ export class CreateProductDto {
 
 isNumber(21) <= OJO! esto no funciona para DTO pero es funcion que puede resultar util
 
+whitelist: true, <= Esto evita que se añadan datos extras
+forbidNonWhitelisted: true, <= ademas da error
+
+```
+app.useGlobalPipes(
+  new ValidationPipe({
+    whitelist: true,
+    forbidNonWhitelisted: true,
+  }),
+);
+
+```
+
 # buenas practicas
 
 - siempre en plural
